@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.main_box{
+    background-image: url(photo.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.btn_one{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 55px;
+}
+.sidebar_menu{
+    position: fixed;
+    left: -375px;
+    background-color: rgb(255, 255, 255,0.1);
+    height: 100vh;
+    width:300px;
+    box-shadow: 0 0 6px rgb(255, 255, 255,0.4);
+    transition: 0.3s all linear;
+
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 80px;
+    box-shadow: 0 0 4px rgb(255, 255, 255,0.4);
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.sidebar_menu .logo a {
+    text-decoration: none ;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    left: 52px;
+    top: 11px;
+    cursor: pointer;
+}
+.sidebar_menu .btn_two i {
+    position: absolute;
+    color: white;
+    font: 20px;
+    left: 270px;
+    line-height: 37px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top:80px;
+    overflow: hidden;
+}
+.sidebar_menu .menu li {
+    list-style:none;
+    margin: 6px;
+    padding: 14px 20px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
+}
+.sidebar_menu .menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sidebar_menu .menu i {
+    padding-right: 10px;
+    color: white;
+    font-size: 25px;
+}
+.sidebar_menu .contacts {
+    position: absolute;
+    left: 25%;
+    bottom: 15px;
+}
+.sidebar_menu .contacts i {
+    font-size: 20px;    
+    color: white;
+    opacity: 0.5;
+    padding: 5px;
+}
+#check{
+    display: none;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgb(255, 255, 255,0.4);
+}
+.btn_one i:hover{
+    font-size: 35px;
+}
+.btn_two i:hover{
+    font-size: 25px;
+}
+.sidebar_menu .contacts i:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+#check:checked ~ .sidebar_menu .menu li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+  
